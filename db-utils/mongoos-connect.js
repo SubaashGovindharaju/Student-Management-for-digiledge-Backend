@@ -12,7 +12,7 @@ const cloudMongoUrl=`mongodb+srv://${username}:${password}@${clusterName}/${dbNa
 const localMongoUrl='mongodb://localhost:27017/student-Nodejs'
 const connectToDb = async () => {
     try {
-        await mongoose.connect(localMongoUrl);
+        await mongoose.connect(cloudMongoUrl);
         console.log("db Connecter successfully");
     } catch (err) {
         console.log(err);
